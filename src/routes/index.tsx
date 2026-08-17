@@ -5,10 +5,11 @@ import { CartButton, CartProvider, CartSheet, WHATSAPP_NUMBER } from "@/componen
 import { MenuSection } from "@/components/MenuSection";
 
 import { HeroCarousel } from "@/components/HeroCarousel";
-import heroDesktopBanner from "@/assets/hero-desktop-banner.png";
 
 const LOGO_URL =
   "https://res.cloudinary.com/twjrm1qo/image/upload/v1786830811/ChatGPT_Image_4_ago_2026_20_46_32.png";
+const HERO_DESKTOP_BANNER =
+  "https://res.cloudinary.com/twjrm1qo/image/upload/v1786934662/Dise%C3%B1o_sin_t%C3%ADtulo.png";
 const HERO_MOBILE_1 = "https://res.cloudinary.com/twjrm1qo/image/upload/v1786831019/para_2_3.png";
 const HERO_MOBILE_2 = "https://res.cloudinary.com/twjrm1qo/image/upload/v1786831059/para_2.png";
 const HERO_MOBILE_3 = "https://res.cloudinary.com/twjrm1qo/image/upload/v1786831425/para_2_1.png";
@@ -154,7 +155,7 @@ function Index() {
             />
           </div>
           <img
-            src={heroDesktopBanner}
+            src={HERO_DESKTOP_BANNER}
             alt="Portada Papá Plátano: sabor del pollo a la brasa con toque amazónico"
             width={2000}
             height={667}

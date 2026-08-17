@@ -57,7 +57,7 @@ const LOCAL = {
 const FACEBOOK_URL = "https://www.facebook.com/polleriapapaplatano";
 const INSTAGRAM_URL = "https://www.instagram.com/papa.platano";
 
-function Index() {
+export function Index() {
   return (
     <CartProvider>
       <div className="min-h-screen bg-background font-sans text-foreground">

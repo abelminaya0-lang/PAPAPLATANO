@@ -26,6 +26,8 @@ function buildSpaIndex() {
     ? `    <script type="module" crossorigin src="/assets/${jsFile}"></script>`
     : "";
 
+  const scriptTags = [cssLink, routesScript, jsScript].filter(Boolean).join("\n");
+
   const htmlContent = `<!DOCTYPE html>
 <html lang="es">
   <head>
@@ -41,9 +43,7 @@ function buildSpaIndex() {
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Anton&family=Barlow:wght@400;500;600;700&display=swap" rel="stylesheet" />
-${cssLink}
-${routesScript}
-${jsScript}
+${scriptTags}
   </head>
   <body>
     <div id="root"></div>

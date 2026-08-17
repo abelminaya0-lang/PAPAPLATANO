@@ -1,5 +1,15 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { MapPin, Phone, Clock, Bike, Flame, Star, Instagram, Facebook } from "lucide-react";
+import {
+  MapPin,
+  Phone,
+  Clock,
+  Bike,
+  Flame,
+  Star,
+  Instagram,
+  Facebook,
+  Navigation,
+} from "lucide-react";
 
 import { CartButton, CartProvider, CartSheet, WHATSAPP_NUMBER } from "@/components/OrderCart";
 import { MenuSection } from "@/components/MenuSection";
@@ -238,15 +248,16 @@ export function Index() {
               <h2 className="mt-2 font-display text-4xl uppercase md:text-5xl">Visítanos</h2>
             </header>
             <article className="mx-auto mt-10 overflow-hidden rounded-2xl bg-card shadow-md md:grid md:grid-cols-2">
-              <img
-                src="https://res.cloudinary.com/twjrm1qo/image/upload/v1786834122/ChatGPT_Image_12_ago_2026_12_15_10.png"
-                alt="Fachada del restaurante Papá Plátano"
-                loading="lazy"
-                referrerPolicy="no-referrer"
-                width={600}
-                height={500}
-                className="h-full w-full object-cover max-h-80 md:max-h-none"
-              />
+              <div className="relative h-72 w-full md:h-full md:min-h-[340px] bg-muted">
+                <iframe
+                  title="Ubicación de Papá Plátano en Google Maps"
+                  src="https://maps.google.com/maps?q=Jr.+Manuel+Ugarteche+399,+Pueblo+Libre,+Lima&t=&z=16&ie=UTF8&iwloc=&output=embed"
+                  className="h-full w-full border-0"
+                  loading="lazy"
+                  allowFullScreen
+                  referrerPolicy="no-referrer-when-downgrade"
+                />
+              </div>
               <div className="flex flex-col justify-center p-8 text-center md:text-left">
                 <h3 className="font-display text-2xl uppercase leading-tight">{LOCAL.name}</h3>
                 <ul className="mt-5 space-y-3.5 text-sm text-muted-foreground">
@@ -266,6 +277,16 @@ export function Index() {
                     <Clock className="size-4 shrink-0 text-brand" /> Atención: {LOCAL.hours}
                   </li>
                 </ul>
+                <div className="mt-6 flex justify-center md:justify-start">
+                  <a
+                    href="https://maps.app.goo.gl/DLzZNJdPTjXYX5S3A"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 rounded-full bg-brand px-6 py-2.5 font-display text-sm uppercase tracking-wider text-brand-foreground shadow-md transition-all hover:scale-105 hover:bg-brand/90"
+                  >
+                    <Navigation className="size-4" /> Cómo llegar en Google Maps
+                  </a>
+                </div>
               </div>
             </article>
           </div>

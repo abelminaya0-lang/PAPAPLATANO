@@ -139,7 +139,7 @@ export const CATEGORIES: Category[] = [
         name: "Combo Para Dos",
         price: 62,
         image:
-          "https://res.cloudinary.com/twjrm1qo/image/upload/v1786831635/Dise%C3%B1o_sin_t%C3%ADtulo_1.jpg",
+          "https://res.cloudinary.com/twjrm1qo/image/upload/v1786980259/Dise%C3%B1o_sin_t%C3%ADtulo_1.jpg",
         label: "❤️ IDEAL PARA DOS",
         items: [
           "1/2 pollo a la brasa",

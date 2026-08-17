@@ -1,0 +1,6 @@
+{
+  "name": "Papa Platano Brasa Amazonica",
+  "description": "Restaurant menu and ordering application for Papa Plátano Brasa Amazónica",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

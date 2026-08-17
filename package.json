@@ -4,10 +4,8 @@
   "sideEffects": false,
   "type": "module",
   "scripts": {
-    "dev": "vite dev",
-    "build": "vite build && mkdir -p dist && cp -r .output/public/* dist/ 2>/dev/null || true && node scripts/generate-html.mjs",
-    "start": "node .output/server/index.mjs",
-    "build:dev": "vite build --mode development",
+    "dev": "vite",
+    "build": "vite build",
     "preview": "vite preview",
     "lint": "eslint .",
     "format": "prettier --write ."

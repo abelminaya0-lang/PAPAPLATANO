@@ -14,7 +14,8 @@ import ensaladaImg from "@/assets/ensalada.jpg";
 import juaneImg from "@/assets/juane.jpg";
 
 export const PLACEHOLDERS = {
-  combos: comboMenu1,
+  combos:
+    "https://res.cloudinary.com/twjrm1qo/image/upload/v1786942898/Dise%C3%B1o_sin_t%C3%ADtulo.jpg",
   brasa: heroPollo,
   mostros: comboMenu2,
   chaufitas: comboMenu1,
@@ -118,7 +119,8 @@ export const CATEGORIES: Category[] = [
         id: "combo-papa-platano",
         name: "Combo Papá Plátano",
         price: 82,
-        image: comboMenu1,
+        image:
+          "https://res.cloudinary.com/twjrm1qo/image/upload/v1786942898/Dise%C3%B1o_sin_t%C3%ADtulo.jpg",
         label: "⭐ MÁS PEDIDO",
         items: [
           "1 pollo a la brasa",
@@ -136,7 +138,8 @@ export const CATEGORIES: Category[] = [
         id: "combo-para-dos",
         name: "Combo Para Dos",
         price: 62,
-        image: comboMenu2,
+        image:
+          "https://res.cloudinary.com/twjrm1qo/image/upload/v1786831635/Dise%C3%B1o_sin_t%C3%ADtulo_1.jpg",
         label: "❤️ IDEAL PARA DOS",
         items: [
           "1/2 pollo a la brasa",
@@ -154,7 +157,8 @@ export const CATEGORIES: Category[] = [
         id: "combo-ronda-papa-platano",
         name: "Combo Ronda Papá Plátano",
         price: 92,
-        image: comboMenu3,
+        image:
+          "https://res.cloudinary.com/twjrm1qo/image/upload/v1786831655/Dise%C3%B1o_sin_t%C3%ADtulo_2.jpg",
         label: "🔥 PARA PROBAR DE TODO",
         items: [
           "1/2 pollo a la brasa",
@@ -172,9 +176,10 @@ export const CATEGORIES: Category[] = [
       },
       {
         id: "combo-san-juanino",
-        name: "Combo San Juanino",
+        name: "Combo San Juanito",
         price: 82,
-        image: comboMenu4,
+        image:
+          "https://res.cloudinary.com/twjrm1qo/image/upload/v1786831672/Dise%C3%B1o_sin_t%C3%ADtulo_3.jpg",
         label: "🌿 SABOR AMAZÓNICO",
         items: [
           "1 pollo a la brasa",

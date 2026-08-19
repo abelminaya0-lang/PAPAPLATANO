@@ -78,14 +78,14 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Papá Plátano | Pollo a la Brasa Amazónica" },
+      { title: "Papa Plátano | Pollo a la Brasa Amazónica" },
       {
         name: "description",
         content:
-          "Papá Plátano: El auténtico sabor del pollo a la brasa con toque amazónico en Lima.",
+          "Papa Plátano: El auténtico sabor del pollo a la brasa con toque amazónico en Lima.",
       },
-      { name: "author", content: "Papá Plátano" },
-      { property: "og:title", content: "Papá Plátano | Pollo a la Brasa Amazónica" },
+      { name: "author", content: "Papa Plátano" },
+      { property: "og:title", content: "Papa Plátano | Pollo a la Brasa Amazónica" },
       {
         property: "og:description",
         content: "Pollo a la brasa al carbón, combos familiares y guarniciones amazónicas.",

@@ -25,11 +25,11 @@ export function LoadingScreen() {
           width={180}
           height={180}
           referrerPolicy="no-referrer"
-          className="size-36 rounded-full object-cover shadow-2xl ring-4 ring-gold/40 animate-pulse md:size-44"
+          className="size-36 object-contain animate-pulse md:size-44"
         />
         <div className="flex flex-col items-center gap-1">
           <span className="font-display text-2xl uppercase tracking-wider text-brand-foreground">
-            Papá <span className="text-gold">Plátano</span>
+            Papa <span className="text-gold">Plátano</span>
           </span>
           <span className="text-xs uppercase tracking-[0.3em] text-gold/80 font-bold">
             Brasa Amazónica

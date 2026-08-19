@@ -29,13 +29,13 @@ const HERO_MOBILE_3 = "https://res.cloudinary.com/twjrm1qo/image/upload/v1786831
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Papá Plátano | Pollo a la brasa y parrillas en Lima" },
+      { title: "Papa Plátano | Pollo a la brasa y parrillas en Lima" },
       {
         name: "description",
         content:
-          "Papá Plátano: pollo a la brasa al carbón, parrillas y combos familiares. Pide delivery o visita nuestros locales en Lima.",
+          "Papa Plátano: pollo a la brasa al carbón, parrillas y combos familiares. Pide delivery o visita nuestros locales en Lima.",
       },
-      { property: "og:title", content: "Papá Plátano | Pollo a la brasa y parrillas" },
+      { property: "og:title", content: "Papa Plátano | Pollo a la brasa y parrillas" },
       {
         property: "og:description",
         content:
@@ -57,7 +57,7 @@ const NAV = [
 ];
 
 const WA_DELIVERY = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(
-  "¡Hola Papá Plátano! 🍗 Quiero hacer un pedido de delivery.",
+  "¡Hola Papa Plátano! 🍗 Quiero hacer un pedido de delivery.",
 )}`;
 
 const LOCAL = {
@@ -110,15 +110,15 @@ export function Index() {
               <a href="#inicio" className="flex items-center gap-3 group">
                 <img
                   src={LOGO_URL}
-                  alt="Logo Papá Plátano"
+                  alt="Logo Papa Plátano"
                   width={56}
                   height={56}
                   referrerPolicy="no-referrer"
-                  className="size-12 md:size-14 rounded-full object-cover shadow-md ring-2 ring-gold/80 transition-transform duration-300 group-hover:scale-105"
+                  className="size-12 md:size-14 object-contain transition-transform duration-300 group-hover:scale-105"
                 />
                 <div className="flex flex-col">
                   <span className="font-display text-2xl md:text-3xl uppercase leading-none tracking-wide">
-                    Papá <span className="text-gold">Plátano</span>
+                    Papa <span className="text-gold">Plátano</span>
                   </span>
                   <span className="text-[10px] font-bold uppercase tracking-[0.25em] text-gold/90">
                     Brasa Amazónica
@@ -155,26 +155,26 @@ export function Index() {
               slides={[
                 {
                   src: HERO_MOBILE_0,
-                  alt: "Papá Plátano - Portada principal móvil",
+                  alt: "Papa Plátano - Portada principal móvil",
                 },
                 {
                   src: HERO_MOBILE_1,
-                  alt: "Papá Plátano - Combo para 2 portada 1",
+                  alt: "Papa Plátano - Combo para 2 portada 1",
                 },
                 {
                   src: HERO_MOBILE_2,
-                  alt: "Papá Plátano - Combo para 2 portada 2",
+                  alt: "Papa Plátano - Combo para 2 portada 2",
                 },
                 {
                   src: HERO_MOBILE_3,
-                  alt: "Papá Plátano - Combo para 2 portada 3",
+                  alt: "Papa Plátano - Combo para 2 portada 3",
                 },
               ]}
             />
           </div>
           <img
             src={HERO_DESKTOP_BANNER}
-            alt="Portada Papá Plátano: sabor del pollo a la brasa con toque amazónico"
+            alt="Portada Papa Plátano: sabor del pollo a la brasa con toque amazónico"
             width={2000}
             height={667}
             referrerPolicy="no-referrer"
@@ -207,7 +207,7 @@ export function Index() {
         <section className="mx-auto grid max-w-6xl items-center gap-10 px-4 py-20 md:grid-cols-2">
           <img
             src="https://res.cloudinary.com/twjrm1qo/image/upload/v1786834122/ChatGPT_Image_12_ago_2026_12_15_10.png"
-            alt="Fachada del local de Papá Plátano en Pueblo Libre"
+            alt="Fachada del local de Papa Plátano en Pueblo Libre"
             loading="lazy"
             referrerPolicy="no-referrer"
             width={900}
@@ -220,7 +220,7 @@ export function Index() {
               Brasa amazónica en Pueblo Libre
             </h2>
             <p className="mt-5 text-muted-foreground">
-              Papá Plátano nació con la receta de nuestra selva: pollos frescos marinados con
+              Papa Plátano nació con la receta de nuestra selva: pollos frescos marinados con
               especias amazónicas y cocidos a la brasa, acompañados de tacacho, cecina y chorizo.
             </p>
             <p className="mt-4 text-muted-foreground">
@@ -255,7 +255,7 @@ export function Index() {
             <article className="mx-auto mt-10 overflow-hidden rounded-2xl bg-card shadow-md md:grid md:grid-cols-2">
               <div className="relative h-72 w-full md:h-full md:min-h-[340px] bg-muted">
                 <iframe
-                  title="Ubicación de Papá Plátano en Google Maps"
+                  title="Ubicación de Papa Plátano en Google Maps"
                   src="https://maps.google.com/maps?q=Jr.+Manuel+Ugarteche+399,+Pueblo+Libre,+Lima&t=&z=16&ie=UTF8&iwloc=&output=embed"
                   className="h-full w-full border-0"
                   loading="lazy"
@@ -326,15 +326,15 @@ export function Index() {
           <div className="mx-auto flex max-w-6xl flex-col items-center gap-4 px-4 text-center text-sm">
             <img
               src={LOGO_URL}
-              alt="Logo Papá Plátano"
+              alt="Logo Papa Plátano"
               width={96}
               height={96}
               loading="lazy"
               referrerPolicy="no-referrer"
-              className="size-24 md:size-28 rounded-full object-cover shadow-lg ring-2 ring-gold/40"
+              className="size-24 md:size-28 object-contain"
             />
             <p className="font-display text-xl uppercase tracking-wider text-brand-foreground">
-              Papá <span className="text-gold">Plátano</span>
+              Papa <span className="text-gold">Plátano</span>
             </p>
             <nav className="flex flex-wrap justify-center gap-5 uppercase tracking-wide">
               {NAV.map((item) => (
@@ -348,7 +348,7 @@ export function Index() {
                 href={FACEBOOK_URL}
                 target="_blank"
                 rel="noopener noreferrer"
-                aria-label="Facebook de Papá Plátano"
+                aria-label="Facebook de Papa Plátano"
                 className="hover:text-gold"
               >
                 <Facebook className="size-5" />
@@ -357,7 +357,7 @@ export function Index() {
                 href={INSTAGRAM_URL}
                 target="_blank"
                 rel="noopener noreferrer"
-                aria-label="Instagram de Papá Plátano"
+                aria-label="Instagram de Papa Plátano"
                 className="hover:text-gold"
               >
                 <Instagram className="size-5" />
@@ -366,7 +366,7 @@ export function Index() {
                 href={TIKTOK_URL}
                 target="_blank"
                 rel="noopener noreferrer"
-                aria-label="TikTok de Papá Plátano"
+                aria-label="TikTok de Papa Plátano"
                 className="hover:text-gold"
               >
                 <svg className="size-5 fill-current" viewBox="0 0 24 24">
@@ -375,7 +375,7 @@ export function Index() {
               </a>
             </div>
 
-            <p>© {new Date().getFullYear()} Papá Plátano. Todos los derechos reservados.</p>
+            <p>© {new Date().getFullYear()} Papa Plátano. Todos los derechos reservados.</p>
           </div>
         </footer>
 

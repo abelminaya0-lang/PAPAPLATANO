@@ -103,7 +103,7 @@ export type CheckoutData = {
 export function buildWhatsAppUrl(items: OrderItem[], total: number, data: CheckoutData) {
   const isDelivery = data.tipoEntrega === "delivery";
   const lines = [
-    "🍌 *PEDIDO PAPÁ PLÁTANO*",
+    "🍌 *PEDIDO PAPA PLÁTANO*",
     "",
     `*Cliente:* ${data.nombre.trim()}`,
     `*Tipo de entrega:* ${isDelivery ? "🛵 DELIVERY" : "🏪 RECOJO EN LOCAL"}`,

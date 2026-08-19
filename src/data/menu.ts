@@ -117,7 +117,7 @@ export const CATEGORIES: Category[] = [
     products: [
       {
         id: "combo-papa-platano",
-        name: "Combo Papá Plátano",
+        name: "Combo Papa Plátano",
         price: 82,
         image:
           "https://res.cloudinary.com/twjrm1qo/image/upload/v1787149067/como_papa_platano_1.jpg",
@@ -155,7 +155,7 @@ export const CATEGORIES: Category[] = [
       },
       {
         id: "combo-ronda-papa-platano",
-        name: "Combo Ronda Papá Plátano",
+        name: "Combo Ronda Papa Plátano",
         price: 92,
         image:
           "https://res.cloudinary.com/twjrm1qo/image/upload/v1786831655/Dise%C3%B1o_sin_t%C3%ADtulo_2.jpg",
@@ -244,7 +244,7 @@ export const CATEGORIES: Category[] = [
       },
       {
         id: "tacacho-pp",
-        name: "Tacacho Papá Plátano",
+        name: "Tacacho Papa Plátano",
         price: 15,
         desc: "Tacacho con trozos de cecina y chorizo.",
         image:

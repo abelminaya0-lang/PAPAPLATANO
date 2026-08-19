@@ -18,7 +18,7 @@ export type GoogleReview = {
 export const GOOGLE_REVIEWS: GoogleReview[] = [
   {
     id: "rev-1",
-    author: "Cliente Papá Plátano",
+    author: "Cliente Papa Plátano",
     avatarText: "CP",
     avatarColor: "bg-orange-500",
     badge: "Local Guide · Reseña Verificada",
@@ -27,7 +27,7 @@ export const GOOGLE_REVIEWS: GoogleReview[] = [
     title: "¡El mejor pollo a la brasa con toque de la selva!",
     comment:
       "Una experiencia increíble. El sabor del pollo marinado a la brasa con especias amazónicas y el chaufa charapa están en su punto exacto. Porciones bien servidas y salsas de la casa espectaculares.",
-    dishes: ["Combo Papá Plátano", "Chaufa Charapa", "Plátano frito"],
+    dishes: ["Combo Papa Plátano", "Chaufa Charapa", "Plátano frito"],
     url: "https://share.google/uzTQoyfFbyTpYknwL",
   },
   {
@@ -289,7 +289,7 @@ export function ReviewsCarousel() {
             className="inline-flex items-center gap-2 rounded-full border-2 border-brand bg-transparent px-6 py-3 font-display text-sm uppercase tracking-wider text-brand transition-all hover:bg-brand hover:text-brand-foreground shadow-sm hover:shadow"
           >
             <Star className="size-4 fill-gold text-gold" />
-            <span>¿Ya probaste Papá Plátano? Déjanos tu opinión en Google</span>
+            <span>¿Ya probaste Papa Plátano? Déjanos tu opinión en Google</span>
           </a>
         </div>
       </div>

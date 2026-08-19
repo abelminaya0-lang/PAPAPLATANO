@@ -14,15 +14,15 @@ import ensaladaImg from "@/assets/ensalada.jpg";
 import juaneImg from "@/assets/juane.jpg";
 
 export const PLACEHOLDERS = {
-  combos:
-    "https://res.cloudinary.com/twjrm1qo/image/upload/v1786942898/Dise%C3%B1o_sin_t%C3%ADtulo.jpg",
+  combos: "https://res.cloudinary.com/twjrm1qo/image/upload/v1787149067/como_papa_platano_1.jpg",
   brasa: heroPollo,
   mostros: comboMenu2,
   chaufitas: comboMenu1,
   mixturado: comboMenu3,
   yapita: canastitasImg,
   cecinas: platoParrilla,
-  bebidas: camuCamuImg,
+  bebidas:
+    "https://res.cloudinary.com/twjrm1qo/image/upload/v1787148728/ChatGPT_Image_19_ago_2026_09_11_38.png",
 };
 
 export type Variant = { label: string; price: number };
@@ -120,7 +120,7 @@ export const CATEGORIES: Category[] = [
         name: "Combo Papá Plátano",
         price: 82,
         image:
-          "https://res.cloudinary.com/twjrm1qo/image/upload/v1786942898/Dise%C3%B1o_sin_t%C3%ADtulo.jpg",
+          "https://res.cloudinary.com/twjrm1qo/image/upload/v1787149067/como_papa_platano_1.jpg",
         label: "⭐ MÁS PEDIDO",
         items: [
           "1 pollo a la brasa",
@@ -340,7 +340,8 @@ export const CATEGORIES: Category[] = [
         id: "cecina-tacacho-chaufa",
         name: "Cecina, Tacacho y Chaufa",
         price: 33,
-        image: comboMenu3,
+        image:
+          "https://res.cloudinary.com/twjrm1qo/image/upload/v1787143660/ChatGPT_Image_19_ago_2026_07_47_25.png",
       },
     ],
   },
@@ -353,7 +354,8 @@ export const CATEGORIES: Category[] = [
       {
         id: "chaufa-simple",
         name: "Chaufa Simple",
-        image: comboMenu2,
+        image:
+          "https://res.cloudinary.com/twjrm1qo/image/upload/v1787144259/Dise%C3%B1o_sin_t%C3%ADtulo_22.jpg",
         isChaufa: true,
         variants: [
           { label: "Mediano", price: 15 },
@@ -363,7 +365,8 @@ export const CATEGORIES: Category[] = [
       {
         id: "chaufa-charapa",
         name: "Chaufa Charapa",
-        image: comboMenu1,
+        image:
+          "https://res.cloudinary.com/twjrm1qo/image/upload/v1787144382/WhatsApp_Image_2026-08-19_at_7.59.12_AM.jpg",
         isChaufa: true,
         variants: [
           { label: "Mediano", price: 21 },
@@ -373,7 +376,8 @@ export const CATEGORIES: Category[] = [
       {
         id: "chaufa-buchisapa",
         name: "Chaufa Buchisapa",
-        image: comboMenu1,
+        image:
+          "https://res.cloudinary.com/twjrm1qo/image/upload/v1787144629/Dise%C3%B1o_sin_t%C3%ADtulo_23.jpg",
         isChaufa: true,
         variants: [
           { label: "Mediano", price: 22 },
@@ -383,7 +387,8 @@ export const CATEGORIES: Category[] = [
       {
         id: "chaufa-charapuerto",
         name: "Chaufa Charapuerto",
-        image: comboMenu2,
+        image:
+          "https://res.cloudinary.com/twjrm1qo/image/upload/v1787144574/Dise%C3%B1o_sin_t%C3%ADtulo_20.jpg",
         isChaufa: true,
         variants: [
           { label: "Mediano", price: 24 },
@@ -393,7 +398,8 @@ export const CATEGORIES: Category[] = [
       {
         id: "chaufa-vegetariano",
         name: "Chaufa Vegetariano",
-        image: comboMenu1,
+        image:
+          "https://res.cloudinary.com/twjrm1qo/image/upload/v1787145037/Dise%C3%B1o_sin_t%C3%ADtulo_24.jpg",
         isChaufa: true,
         variants: [
           { label: "Mediano", price: 20 },
@@ -408,20 +414,95 @@ export const CATEGORIES: Category[] = [
     shortLabel: "🍌 La Yapita",
     image: PLACEHOLDERS.yapita,
     products: [
-      { id: "juane-presa", name: "Juane con presa", price: 23, image: juaneImg },
-      { id: "juane-simple", name: "Juane", price: 15, image: juaneImg },
-      { id: "charapita", name: "Charapita personal", price: 10, image: platoParrilla },
-      { id: "platano-frito", name: "Plátano frito", price: 10, image: tacachoImg },
-      { id: "maduritos", name: "Maduritos", price: 10, image: canastitasImg },
-      { id: "patacones", name: "Patacones", price: 12, image: platoParrilla },
-      { id: "tacacho-simple", name: "Tacacho simple", price: 9, image: tacachoImg },
-      { id: "ensalada", name: "Ensalada", price: 8, image: ensaladaImg },
-      { id: "cuarto-solo", name: "1/4 pollo solo", price: 16, image: platoMedioPollo },
-      { id: "chorizo", name: "Chorizo", price: 14, image: platoParrilla },
-      { id: "cecina", name: "Cecina", price: 16, image: platoParrilla },
-      { id: "papas", name: "Papas", price: 12, image: comboFamiliar },
-      { id: "maduro-queso", name: "Maduro relleno con queso", price: 12, image: canastitasImg },
-      { id: "canastitas", name: "Canastitas arrechas", price: 20, image: canastitasImg },
+      {
+        id: "juane-presa",
+        name: "Juane con presa",
+        price: 23,
+        image: "https://res.cloudinary.com/twjrm1qo/image/upload/v1786832483/22.jpg",
+      },
+      {
+        id: "juane-simple",
+        name: "Juane",
+        price: 15,
+        image:
+          "https://res.cloudinary.com/twjrm1qo/image/upload/v1787145321/Captura_de_pantalla_2026-08-19_081506.png",
+      },
+      {
+        id: "charapita",
+        name: "Charapita personal",
+        price: 10,
+        image:
+          "https://res.cloudinary.com/twjrm1qo/image/upload/v1786834006/vrtjbrwrjkiwnfqbk37a.jpg",
+      },
+      {
+        id: "platano-frito",
+        name: "Plátano frito",
+        price: 10,
+        image: "https://res.cloudinary.com/twjrm1qo/image/upload/v1787146299/11.jpg",
+      },
+      {
+        id: "maduritos",
+        name: "Maduritos",
+        price: 10,
+        image: "https://res.cloudinary.com/twjrm1qo/image/upload/v1787146521/maduro.jpg",
+      },
+      {
+        id: "patacones",
+        name: "Patacones",
+        price: 12,
+        image: "https://res.cloudinary.com/twjrm1qo/image/upload/v1787146610/12.jpg",
+      },
+      {
+        id: "tacacho-simple",
+        name: "Tacacho simple",
+        price: 9,
+        image:
+          "https://res.cloudinary.com/twjrm1qo/image/upload/v1787147156/Dise%C3%B1o_sin_t%C3%ADtulo_6.png",
+      },
+      {
+        id: "ensalada",
+        name: "Ensalada",
+        price: 8,
+        image: "https://res.cloudinary.com/twjrm1qo/image/upload/v1786832424/ENSALADA.jpg",
+      },
+      {
+        id: "cuarto-solo",
+        name: "1/4 pollo solo",
+        price: 16,
+        image: "https://res.cloudinary.com/twjrm1qo/image/upload/v1787147381/pollo.png",
+      },
+      {
+        id: "chorizo",
+        name: "Chorizo",
+        price: 14,
+        image: "https://res.cloudinary.com/twjrm1qo/image/upload/v1787147569/chorizo.png",
+      },
+      {
+        id: "cecina",
+        name: "Cecina",
+        price: 16,
+        image:
+          "https://res.cloudinary.com/twjrm1qo/image/upload/v1787147883/ChatGPT_Image_19_ago_2026_08_57_53.png",
+      },
+      {
+        id: "papas",
+        name: "Papas",
+        price: 12,
+        image: "https://res.cloudinary.com/twjrm1qo/image/upload/v1787147929/PAPAS.jpg",
+      },
+      {
+        id: "maduro-queso",
+        name: "Maduro relleno con queso",
+        price: 12,
+        image: "https://res.cloudinary.com/twjrm1qo/image/upload/v1787148096/hol.png",
+      },
+      {
+        id: "canastitas",
+        name: "Canastitas arrechas",
+        price: 20,
+        image:
+          "https://res.cloudinary.com/twjrm1qo/image/upload/v1787148154/Dise%C3%B1o_sin_t%C3%ADtulo_5.jpg",
+      },
     ],
   },
   {
@@ -431,19 +512,11 @@ export const CATEGORIES: Category[] = [
     image: PLACEHOLDERS.bebidas,
     products: [
       {
-        id: "camu-camu",
-        name: "Camu Camu",
-        image: camuCamuImg,
-        isBebidaSize: true,
-        variants: [
-          { label: "1/2 L", price: 7.5 },
-          { label: "1 L", price: 15 },
-        ],
-      },
-      {
-        id: "cocona",
-        name: "Cocona",
-        image: camuCamuImg,
+        id: "bebida-pedido",
+        name: "Bebida para tu pedido",
+        desc: "Camu camu, cocona o chicha morada",
+        image:
+          "https://res.cloudinary.com/twjrm1qo/image/upload/v1787148728/ChatGPT_Image_19_ago_2026_09_11_38.png",
         isBebidaSize: true,
         variants: [
           { label: "1/2 L", price: 7.5 },

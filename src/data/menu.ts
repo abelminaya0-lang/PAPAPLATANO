@@ -206,7 +206,8 @@ export const CATEGORIES: Category[] = [
         name: "1/4 Pollo + Guarnición",
         price: 23,
         items: ["1/4 pollo", "Ensalada", "Cremas"],
-        image: heroPollo,
+        image:
+          "https://res.cloudinary.com/twjrm1qo/image/upload/v1787109811/Dise%C3%B1o_sin_t%C3%ADtulo_9.jpg",
         hasGuarnicion: true,
         recommendations: [
           { name: "Bebida Regional 1/2 L", price: 7.5 },
@@ -219,7 +220,8 @@ export const CATEGORIES: Category[] = [
         name: "Mostro Clásico",
         price: 29,
         items: ["1/4 pollo", "Chaufa de pollo", "Guarnición"],
-        image: comboMenu2,
+        image:
+          "https://res.cloudinary.com/twjrm1qo/image/upload/v1787109266/Dise%C3%B1o_sin_t%C3%ADtulo_7.jpg",
         hasGuarnicion: true,
       },
       {
@@ -227,7 +229,8 @@ export const CATEGORIES: Category[] = [
         name: "Mostro Charapa",
         price: 31,
         items: ["1/4 pollo", "Chaufa charapa", "Guarnición"],
-        image: comboMenu1,
+        image:
+          "https://res.cloudinary.com/twjrm1qo/image/upload/v1787110058/Dise%C3%B1o_sin_t%C3%ADtulo_10.jpg",
         hasGuarnicion: true,
       },
       {
@@ -235,7 +238,8 @@ export const CATEGORIES: Category[] = [
         name: "Sacha Mostro",
         price: 32,
         items: ["1/4 pollo", "Juane simple", "Guarnición"],
-        image: juaneImg,
+        image:
+          "https://res.cloudinary.com/twjrm1qo/image/upload/v1787110394/Dise%C3%B1o_sin_t%C3%ADtulo_11.jpg",
         hasGuarnicion: true,
       },
       {
@@ -243,29 +247,44 @@ export const CATEGORIES: Category[] = [
         name: "Tacacho Papá Plátano",
         price: 15,
         desc: "Tacacho con trozos de cecina y chorizo.",
-        image: tacachoImg,
+        image:
+          "https://res.cloudinary.com/twjrm1qo/image/upload/v1787110739/Dise%C3%B1o_sin_t%C3%ADtulo_12.jpg",
       },
-      { id: "cuarto-tacacho", name: "1/4 Pollo con Tacacho", price: 23, image: tacachoImg },
+      {
+        id: "cuarto-tacacho",
+        name: "1/4 Pollo con Tacacho",
+        price: 23,
+        image:
+          "https://res.cloudinary.com/twjrm1qo/image/upload/v1787110973/Dise%C3%B1o_sin_t%C3%ADtulo_13.jpg",
+      },
       {
         id: "cuarto-tacacho-chaufa",
         name: "1/4 Pollo + Tacacho + Chaufa Charapa",
         price: 31,
-        image: comboMenu3,
+        image:
+          "https://res.cloudinary.com/twjrm1qo/image/upload/v1787111249/Dise%C3%B1o_sin_t%C3%ADtulo_14.jpg",
       },
-      { id: "cuarto-tacacho-pp", name: "1/4 Pollo + Tacacho PP", price: 28, image: tacachoImg },
+      {
+        id: "cuarto-tacacho-pp",
+        name: "1/4 Pollo + Tacacho PP",
+        price: 28,
+        image:
+          "https://res.cloudinary.com/twjrm1qo/image/upload/v1787111468/Dise%C3%B1o_sin_t%C3%ADtulo_15.jpg",
+      },
       {
         id: "la-pishcota",
         name: "La Pishcota",
         price: 34,
         items: ["1/4 pollo", "Tacacho PP", "Chaufa charapa"],
-        image: comboMenu3,
+        image:
+          "https://res.cloudinary.com/twjrm1qo/image/upload/v1787111694/WhatsApp_Image_2026-08-18_at_10.54.21_PM.jpg",
       },
       {
         id: "moshaco",
         name: "Moshaco",
         price: 35,
         items: ["1/4 pollo", "Tacacho", "Juane"],
-        image: comboMenu3,
+        image: "https://res.cloudinary.com/twjrm1qo/image/upload/v1787111862/xx.jpg",
       },
     ],
   },
@@ -275,27 +294,48 @@ export const CATEGORIES: Category[] = [
     shortLabel: "🥩 Cecinas",
     image: PLACEHOLDERS.cecinas,
     products: [
-      { id: "cecina-patacones", name: "Cecina y Patacones", price: 24, image: platoParrilla },
-      { id: "cecina-tacacho", name: "Cecina y Tacacho", price: 27, image: tacachoImg },
+      {
+        id: "cecina-patacones",
+        name: "Cecina y Patacones",
+        price: 24,
+        image:
+          "https://res.cloudinary.com/twjrm1qo/image/upload/v1787112330/Dise%C3%B1o_sin_t%C3%ADtulo_16.jpg",
+      },
+      {
+        id: "cecina-tacacho",
+        name: "Cecina y Tacacho",
+        price: 27,
+        image:
+          "https://res.cloudinary.com/twjrm1qo/image/upload/v1787112878/Dise%C3%B1o_sin_t%C3%ADtulo_17.jpg",
+      },
       {
         id: "cecina-chorizo-patacon",
         name: "Cecina, Chorizo y Patacón",
         price: 30,
-        image: platoParrilla,
+        image:
+          "https://res.cloudinary.com/twjrm1qo/image/upload/v1787113345/Dise%C3%B1o_sin_t%C3%ADtulo_18.jpg",
       },
       {
         id: "cecina-chorizo-tacacho",
         name: "Cecina, Chorizo y Tacacho",
         price: 32,
-        image: platoParrilla,
+        image:
+          "https://res.cloudinary.com/twjrm1qo/image/upload/v1787113695/ChatGPT_Image_18_ago_2026_23_27_48.png",
       },
       {
         id: "cecina-chorizo-tacacho-juane",
         name: "Cecina, Chorizo, Tacacho y Juane",
         price: 39,
-        image: comboMenu3,
+        image:
+          "https://res.cloudinary.com/twjrm1qo/image/upload/v1787113986/WhatsApp_Image_2026-08-07_at_7.39.00_PM_1.jpg",
       },
-      { id: "cecina-maduro-chaufa", name: "Cecina, Maduro y Chaufa", price: 30, image: comboMenu2 },
+      {
+        id: "cecina-maduro-chaufa",
+        name: "Cecina, Maduro y Chaufa",
+        price: 30,
+        image:
+          "https://res.cloudinary.com/twjrm1qo/image/upload/v1787114283/Dise%C3%B1o_sin_t%C3%ADtulo_19.jpg",
+      },
       {
         id: "cecina-tacacho-chaufa",
         name: "Cecina, Tacacho y Chaufa",

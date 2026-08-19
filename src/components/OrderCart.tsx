@@ -146,7 +146,7 @@ export function CartSheet() {
   const [data, setData] = React.useState<CheckoutData>({
     nombre: "",
     pago: "",
-    tipoEntrega: "recojo",
+    tipoEntrega: "delivery",
     direccion: "",
     referencia: "",
     nota: "",
@@ -298,27 +298,12 @@ export function CartSheet() {
                     )}
                   </div>
 
-                  {/* Tipo de Entrega: Recojo en local vs Delivery */}
+                  {/* Tipo de Entrega: Delivery vs Recojo en local */}
                   <div>
                     <label className="text-[10px] font-bold uppercase tracking-widest text-muted-foreground">
                       🛵 ¿Cómo recibirás tu pedido? *
                     </label>
                     <div className="mt-2 grid grid-cols-2 gap-2.5">
-                      <button
-                        type="button"
-                        onClick={() => setData({ ...data, tipoEntrega: "recojo" })}
-                        className={`flex flex-col items-center justify-center gap-1.5 rounded-xl border-2 p-3.5 text-center transition-all ${
-                          data.tipoEntrega === "recojo"
-                            ? "border-brand bg-brand/10 font-bold text-foreground shadow-sm ring-1 ring-brand"
-                            : "border-border text-muted-foreground hover:border-brand/40"
-                        }`}
-                      >
-                        <Store className="size-5 text-brand" />
-                        <span className="font-display text-xs uppercase tracking-wider">
-                          Recojo en local
-                        </span>
-                      </button>
-
                       <button
                         type="button"
                         onClick={() => setData({ ...data, tipoEntrega: "delivery" })}
@@ -331,6 +316,21 @@ export function CartSheet() {
                         <Bike className="size-5 text-brand" />
                         <span className="font-display text-xs uppercase tracking-wider">
                           Delivery
+                        </span>
+                      </button>
+
+                      <button
+                        type="button"
+                        onClick={() => setData({ ...data, tipoEntrega: "recojo" })}
+                        className={`flex flex-col items-center justify-center gap-1.5 rounded-xl border-2 p-3.5 text-center transition-all ${
+                          data.tipoEntrega === "recojo"
+                            ? "border-brand bg-brand/10 font-bold text-foreground shadow-sm ring-1 ring-brand"
+                            : "border-border text-muted-foreground hover:border-brand/40"
+                        }`}
+                      >
+                        <Store className="size-5 text-brand" />
+                        <span className="font-display text-xs uppercase tracking-wider">
+                          Recojo en local
                         </span>
                       </button>
                     </div>

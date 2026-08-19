@@ -303,22 +303,19 @@ export function Index() {
             <h2 className="font-display text-4xl uppercase md:text-5xl">
               Pide tu pollo a la brasa ahora
             </h2>
-            <p className="max-w-xl text-brand-foreground/85">
-              Llámanos o escríbenos por WhatsApp y recibe tu pedido caliente en la puerta de tu
-              casa.
-            </p>
-            <div className="flex flex-wrap justify-center gap-4">
-              <a
-                href="tel:+51946437644"
-                className="rounded-full bg-gold px-7 py-3 font-display text-lg uppercase tracking-wide text-charcoal transition-transform hover:scale-105"
-              >
-                Llamar 946 437 644
-              </a>
+            <div className="max-w-xl space-y-2 text-brand-foreground/90">
+              <p className="text-base md:text-lg leading-relaxed">
+                Haz tu pedido por nuestro WhatsApp Delivery y recibe tu comida favorita, caliente y
+                recién preparada, en la puerta de tu casa. 🍗🔥
+              </p>
+              <p className="font-bold text-gold">¡Haz clic abajo y pide ahora! 👇</p>
+            </div>
+            <div className="flex justify-center">
               <a
                 href="#carta"
-                className="rounded-full border-2 border-brand-foreground px-7 py-3 font-display text-lg uppercase tracking-wide transition-colors hover:bg-brand-foreground hover:text-brand"
+                className="rounded-full bg-gold px-8 py-4 font-display text-lg uppercase tracking-wide text-charcoal shadow-xl transition-all hover:scale-105 hover:bg-gold/90 active:scale-95"
               >
-                Ver la carta
+                Pide aqui ñañit@
               </a>
             </div>
           </div>

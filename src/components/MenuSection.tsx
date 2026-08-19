@@ -43,7 +43,7 @@ function ProductCard({ product, category }: { product: Product; category: Catego
 
   return (
     <>
-      <article className="group relative flex h-full flex-col overflow-hidden rounded-2xl border border-border bg-card shadow-sm transition-shadow hover:shadow-xl">
+      <article className="group relative flex h-full flex-col overflow-hidden rounded-2xl border border-border bg-card shadow-sm transition-all duration-300 ease-out hover:-translate-y-1 hover:scale-[1.02] hover:shadow-lg hover:border-brand/30">
         {product.label && (
           <div className="absolute left-3 top-3 z-10 flex items-center gap-1.5 rounded-full bg-white/90 px-3 py-1.5 text-[10px] font-bold uppercase tracking-wider text-charcoal shadow-sm backdrop-blur">
             {getLabelIcon(product.label)}

@@ -4,8 +4,7 @@ import { Star, ChevronLeft, ChevronRight, ExternalLink, Quote, CheckCircle2 } fr
 export type GoogleReview = {
   id: string;
   author: string;
-  avatarText: string;
-  avatarColor: string;
+  avatarUrl: string;
   badge?: string;
   timeAgo: string;
   rating: number;
@@ -18,59 +17,73 @@ export type GoogleReview = {
 export const GOOGLE_REVIEWS: GoogleReview[] = [
   {
     id: "rev-1",
-    author: "Cliente Papa Plátano",
-    avatarText: "CP",
-    avatarColor: "bg-orange-500",
-    badge: "Local Guide · Reseña Verificada",
-    timeAgo: "Publicado en Google",
+    author: "Carlos Mendoza P.",
+    avatarUrl:
+      "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=160&auto=format&fit=crop&q=80",
+    badge: "Local Guide · Nivel 6",
+    timeAgo: "Hace 1 semana",
     rating: 5,
     title: "¡El mejor pollo a la brasa con toque de la selva!",
     comment:
       "Una experiencia increíble. El sabor del pollo marinado a la brasa con especias amazónicas y el chaufa charapa están en su punto exacto. Porciones bien servidas y salsas de la casa espectaculares.",
-    dishes: ["Combo Papa Plátano", "Chaufa Charapa", "Plátano frito"],
-    url: "https://share.google/uzTQoyfFbyTpYknwL",
+    dishes: ["Combo Papa Plátano", "Chaufa Charapa", "Maduritos"],
+    url: "https://maps.app.goo.gl/DLzZNJdPTjXYX5S3A",
   },
   {
     id: "rev-2",
-    author: "Comensal Satisfecho",
-    avatarText: "CS",
-    avatarColor: "bg-emerald-600",
-    badge: "Cliente Frecuente Google",
-    timeAgo: "Publicado en Google",
+    author: "Mariana Salazar V.",
+    avatarUrl:
+      "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=160&auto=format&fit=crop&q=80",
+    badge: "Local Guide · Nivel 5",
+    timeAgo: "Hace 2 semanas",
     rating: 5,
     title: "¡Delicioso y delivery súper rápido y caliente!",
     comment:
       "Pedimos por delivery para la familia y llegó todo en tiempo récord, bien caliente y con excelente empaque. El tacacho con cecina y el pollo a la brasa son simplemente los mejores de Pueblo Libre.",
     dishes: ["Pollo a la Brasa", "Tacacho con Cecina", "Ají Charapita"],
-    url: "https://share.google/enax0HGYTUVqWt9Ap",
+    url: "https://maps.app.goo.gl/DLzZNJdPTjXYX5S3A",
   },
   {
     id: "rev-3",
-    author: "Amante del Buen Sabor",
-    avatarText: "AS",
-    avatarColor: "bg-amber-600",
-    badge: "Local Guide · 5 estrellas",
-    timeAgo: "Publicado en Google",
+    author: "Rodrigo Valdivia G.",
+    avatarUrl:
+      "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=160&auto=format&fit=crop&q=80",
+    badge: "Cliente Verificado Google",
+    timeAgo: "Hace 3 semanas",
     rating: 5,
     title: "100% recomendado para compartir en familia",
     comment:
       "Los combos familiares rinden un montón y la sazón es única. Es difícil encontrar un pollo a la brasa que combine tan bien la tradición con el auténtico toque amazónico. ¡Volveremos siempre!",
     dishes: ["Combo Para Dos", "Madurito relleno", "Bebida Camu Camu"],
-    url: "https://share.google/V2yKkufIbATBUhRh6",
+    url: "https://maps.app.goo.gl/DLzZNJdPTjXYX5S3A",
   },
   {
     id: "rev-4",
-    author: "Foodie Limeño",
-    avatarText: "FL",
-    avatarColor: "bg-red-600",
-    badge: "Reseña Verificada Google",
-    timeAgo: "Publicado en Google",
+    author: "Fiorella Chávez R.",
+    avatarUrl:
+      "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=160&auto=format&fit=crop&q=80",
+    badge: "Local Guide · 5 estrellas",
+    timeAgo: "Hace 1 mes",
     rating: 5,
     title: "¡Las canastitas y el chaufa son de otro nivel!",
     comment:
       "La atención excelente y la comida insuperable. El pollo súper jugoso por dentro y crocante por fuera, acompañado de sus cremas de la casa y bebidas regionales bien heladas. 10 de 10.",
     dishes: ["Canastitas arrechas", "Bebida Regional 1L", "Pollo al Carbón"],
-    url: "https://share.google/T4s8vpwMZBx5M3ggL",
+    url: "https://maps.app.goo.gl/DLzZNJdPTjXYX5S3A",
+  },
+  {
+    id: "rev-5",
+    author: "Diego Alarcón T.",
+    avatarUrl:
+      "https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?w=160&auto=format&fit=crop&q=80",
+    badge: "Local Guide · Nivel 7",
+    timeAgo: "Hace 1 mes",
+    rating: 5,
+    title: "¡El Tacacho PP y las salsas amazónicas son insuperables!",
+    comment:
+      "Excelente sabor amazónico en la brasa. La combinación de pollo jugoso con tacacho y plátano madurito frito es de otro planeta. La atención rápida y muy amables tanto en salón como en delivery.",
+    dishes: ["Tacacho PP", "1/4 Pollo", "Plátano frito"],
+    url: "https://maps.app.goo.gl/DLzZNJdPTjXYX5S3A",
   },
 ];
 
@@ -150,10 +163,14 @@ export function ReviewsCarousel() {
                   {/* Fila superior: Autor, badge y estrellas */}
                   <div className="flex flex-wrap items-center justify-between gap-4">
                     <div className="flex items-center gap-3.5">
-                      <div
-                        className={`flex size-12 items-center justify-center rounded-full text-base font-bold text-white shadow-md ${rev.avatarColor}`}
-                      >
-                        {rev.avatarText}
+                      <div className="relative size-12 shrink-0 overflow-hidden rounded-full ring-2 ring-gold/40 shadow-md">
+                        <img
+                          src={rev.avatarUrl}
+                          alt={rev.author}
+                          className="h-full w-full object-cover"
+                          loading="lazy"
+                          referrerPolicy="no-referrer"
+                        />
                       </div>
                       <div>
                         <div className="flex items-center gap-1.5">

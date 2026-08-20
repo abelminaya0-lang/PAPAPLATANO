@@ -435,14 +435,14 @@ export const CATEGORIES: Category[] = [
           "https://res.cloudinary.com/twjrm1qo/image/upload/v1786834006/vrtjbrwrjkiwnfqbk37a.jpg",
       },
       {
-        id: "platano-frito",
-        name: "Plátano frito",
+        id: "maduritos",
+        name: "Maduritos",
         price: 10,
         image: "https://res.cloudinary.com/twjrm1qo/image/upload/v1787146299/11.jpg",
       },
       {
-        id: "maduritos",
-        name: "Maduritos",
+        id: "platano-frito",
+        name: "Plátano frito",
         price: 10,
         image: "https://res.cloudinary.com/twjrm1qo/image/upload/v1787146521/maduro.jpg",
       },

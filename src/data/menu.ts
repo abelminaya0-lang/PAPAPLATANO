@@ -262,7 +262,7 @@ export const CATEGORIES: Category[] = [
         name: "1/4 Pollo + Tacacho + Chaufa Charapa",
         price: 31,
         image:
-          "https://res.cloudinary.com/twjrm1qo/image/upload/v1787111249/Dise%C3%B1o_sin_t%C3%ADtulo_14.jpg",
+          "https://res.cloudinary.com/twjrm1qo/image/upload/v1787111694/WhatsApp_Image_2026-08-18_at_10.54.21_PM.jpg",
       },
       {
         id: "cuarto-tacacho-pp",
@@ -277,7 +277,7 @@ export const CATEGORIES: Category[] = [
         price: 34,
         items: ["1/4 pollo", "Tacacho PP", "Chaufa charapa"],
         image:
-          "https://res.cloudinary.com/twjrm1qo/image/upload/v1787111694/WhatsApp_Image_2026-08-18_at_10.54.21_PM.jpg",
+          "https://res.cloudinary.com/twjrm1qo/image/upload/v1787111249/Dise%C3%B1o_sin_t%C3%ADtulo_14.jpg",
       },
       {
         id: "moshaco",

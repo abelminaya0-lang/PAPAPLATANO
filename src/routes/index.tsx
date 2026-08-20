@@ -136,9 +136,7 @@ export function Index() {
                 <CartButton />
 
                 <a
-                  href={WA_DELIVERY}
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  href="#carta"
                   className="hidden rounded-full border-2 border-gold px-4 py-2 text-sm font-bold uppercase tracking-wide text-gold transition-colors hover:bg-gold hover:text-charcoal sm:inline-flex"
                 >
                   Pedir delivery
@@ -315,7 +313,7 @@ export function Index() {
                 href="#carta"
                 className="rounded-full bg-gold px-8 py-4 font-display text-lg uppercase tracking-wide text-charcoal shadow-xl transition-all hover:scale-105 hover:bg-gold/90 active:scale-95"
               >
-                Pide aqui ñañit@
+                Ver carta
               </a>
             </div>
           </div>

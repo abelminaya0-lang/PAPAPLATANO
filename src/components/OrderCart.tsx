@@ -112,6 +112,7 @@ export function buildWhatsAppUrl(items: OrderItem[], total: number, data: Checko
     ...items.map((i) => `*${i.qty} x* ${i.title} — ${formatPrice(i.price * i.qty)}`),
     "",
     `*TOTAL: ${formatPrice(total)}*`,
+    isDelivery ? "*🛵 Delivery:* Por cotizar" : "",
     "",
     `*💳 Método de pago:* ${data.pago}`,
     isDelivery

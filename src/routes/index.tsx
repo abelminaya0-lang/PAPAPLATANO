@@ -49,8 +49,9 @@ export const Route = createFileRoute("/")({
 });
 
 const NAV = [
-  { label: "Inicio", href: "#inicio" },
-  { label: "Nuestra carta", href: "#carta" },
+  { label: "Carta Delivery", href: "#carta" },
+  { label: "Promociones", href: "#portada" },
+  { label: "Nosotros", href: "#nosotros" },
   { label: "Opiniones", href: "#comentarios" },
   { label: "Locales", href: "#locales" },
   { label: "Contacto", href: "#contacto" },
@@ -107,17 +108,17 @@ export function Index() {
           {/* Header */}
           <header className="border-b-4 border-gold bg-brand text-brand-foreground shadow-md">
             <div className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-4 py-2.5">
-              <a href="#inicio" className="flex items-center gap-3 group">
+              <a href="#carta" className="group flex items-center gap-3">
                 <img
                   src={LOGO_URL}
                   alt="Logo Papa Plátano"
                   width={56}
                   height={56}
                   referrerPolicy="no-referrer"
-                  className="size-12 md:size-14 object-contain transition-transform duration-300 group-hover:scale-105"
+                  className="size-12 object-contain transition-transform duration-300 group-hover:scale-105 md:size-14"
                 />
                 <div className="flex flex-col">
-                  <span className="font-display text-2xl md:text-3xl uppercase leading-none tracking-wide">
+                  <span className="font-display text-2xl uppercase leading-none tracking-wide md:text-3xl">
                     Papa <span className="text-gold">Plátano</span>
                   </span>
                   <span className="text-[10px] font-bold uppercase tracking-[0.25em] text-gold/90">
@@ -146,8 +147,22 @@ export function Index() {
           </header>
         </div>
 
-        {/* Hero — solo imagen (móvil vertical / desktop banner) */}
-        <section id="inicio" className="bg-charcoal">
+        {/* Ancla para inicio / tope de la página */}
+        <div id="inicio" className="relative -top-32" />
+
+        {/* PRIMER BLOQUE: Carta Delivery completa (con categorías sticky arriba y productos hacia abajo) */}
+        <MenuSection />
+
+        {/* SEGUNDO BLOQUE: Portada y Promociones (móvil carrusel vertical / desktop banner) */}
+        <section id="portada" className="scroll-mt-24 bg-charcoal">
+          <div className="mx-auto max-w-6xl px-4 pt-8 pb-3 text-center">
+            <span className="font-display text-xs uppercase tracking-[0.3em] text-gold">
+              Promociones Especiales
+            </span>
+            <h2 className="mt-1 font-display text-2xl uppercase text-white md:text-3xl">
+              Combos Papa Plátano
+            </h2>
+          </div>
           <div className="block md:hidden">
             <HeroCarousel
               slides={[
@@ -176,7 +191,7 @@ export function Index() {
             width={2000}
             height={667}
             referrerPolicy="no-referrer"
-            className="hidden w-full object-cover md:block max-h-[640px]"
+            className="hidden max-h-[640px] w-full object-cover md:block"
           />
         </section>
 
@@ -199,10 +214,11 @@ export function Index() {
           </div>
         </section>
 
-        <MenuSection />
-
         {/* Nosotros */}
-        <section className="mx-auto grid max-w-6xl items-center gap-10 px-4 py-20 md:grid-cols-2">
+        <section
+          id="nosotros"
+          className="scroll-mt-24 mx-auto grid max-w-6xl items-center gap-10 px-4 py-20 md:grid-cols-2"
+        >
           <img
             src="https://res.cloudinary.com/twjrm1qo/image/upload/v1786834122/ChatGPT_Image_12_ago_2026_12_15_10.png"
             alt="Fachada del local de Papa Plátano en Pueblo Libre"

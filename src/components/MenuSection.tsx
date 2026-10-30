@@ -161,12 +161,28 @@ function ProductCard({ product, category }: { product: Product; category: Catego
 
 export function MenuSection() {
   const [activeId, setActiveId] = React.useState(CATEGORIES[0]!.id);
+  const activeIdRef = React.useRef(CATEGORIES[0]!.id);
   const navTrackRef = React.useRef<HTMLUListElement | null>(null);
   const isClickingRef = React.useRef(false);
 
+  const scrollNavToButton = React.useCallback((id: string) => {
+    const btn = document.getElementById(`nav-btn-${id}`);
+    const track = navTrackRef.current;
+    if (btn && track) {
+      const targetLeft = btn.offsetLeft - track.clientWidth / 2 + btn.clientWidth / 2;
+      track.scrollTo({
+        left: Math.max(0, targetLeft),
+        behavior: "smooth",
+      });
+    }
+  }, []);
+
   const scrollToCategory = (id: string) => {
     setActiveId(id);
+    activeIdRef.current = id;
     isClickingRef.current = true;
+    scrollNavToButton(id);
+
     const el = document.getElementById(`cat-${id}`);
     if (el) {
       // Offset para header sticky (~104px) + barra de categorias (~65px)
@@ -180,35 +196,51 @@ export function MenuSection() {
   };
 
   React.useEffect(() => {
+    let ticking = false;
+
     const handleScroll = () => {
       if (isClickingRef.current) return;
-      const scrollY = window.scrollY;
-      const offset = 210;
+      if (ticking) return;
 
-      for (let i = CATEGORIES.length - 1; i >= 0; i--) {
-        const cat = CATEGORIES[i];
-        const el = document.getElementById(`cat-${cat.id}`);
-        if (el) {
-          const top = el.offsetTop - offset;
-          if (scrollY >= top) {
-            setActiveId(cat.id);
-            const btn = document.getElementById(`nav-btn-${cat.id}`);
-            if (btn && navTrackRef.current) {
-              btn.scrollIntoView({
-                behavior: "smooth",
-                block: "nearest",
-                inline: "center",
-              });
-            }
-            break;
+      ticking = true;
+      requestAnimationFrame(() => {
+        ticking = false;
+        if (isClickingRef.current) return;
+
+        // Si el usuario ya pasó la sección del menú y está en portada o más abajo, no intervenir
+        const cartaEl = document.getElementById("carta");
+        if (cartaEl) {
+          const cartaRect = cartaEl.getBoundingClientRect();
+          // Si el fondo de la carta está por encima de la vista (usuario bajó a portada/demás bloques)
+          if (cartaRect.bottom < 160) {
+            return;
           }
         }
-      }
+
+        const scrollY = window.scrollY;
+        const offset = 210;
+
+        for (let i = CATEGORIES.length - 1; i >= 0; i--) {
+          const cat = CATEGORIES[i];
+          const el = document.getElementById(`cat-${cat.id}`);
+          if (el) {
+            const top = el.offsetTop - offset;
+            if (scrollY >= top) {
+              if (activeIdRef.current !== cat.id) {
+                activeIdRef.current = cat.id;
+                setActiveId(cat.id);
+                scrollNavToButton(cat.id);
+              }
+              break;
+            }
+          }
+        }
+      });
     };
 
     window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+  }, [scrollNavToButton]);
 
   return (
     <section id="carta" className="scroll-mt-28 bg-background pt-6 pb-16 md:pt-10 md:pb-24">

@@ -5,17 +5,24 @@ const LOGO_URL =
 
 export function LoadingScreen() {
   const [hidden, setHidden] = useState(false);
+  const [mounted, setMounted] = useState(true);
 
   useEffect(() => {
-    const t = setTimeout(() => setHidden(true), 1100);
-    return () => clearTimeout(t);
+    const t1 = setTimeout(() => setHidden(true), 900);
+    const t2 = setTimeout(() => setMounted(false), 1500);
+    return () => {
+      clearTimeout(t1);
+      clearTimeout(t2);
+    };
   }, []);
+
+  if (!mounted) return null;
 
   return (
     <div
       aria-hidden={hidden}
-      className={`fixed inset-0 z-[100] grid place-items-center bg-charcoal transition-opacity duration-500 ${
-        hidden ? "pointer-events-none opacity-0" : "opacity-100"
+      className={`fixed inset-0 z-[100] grid place-items-center bg-charcoal transition-opacity duration-500 pointer-events-none ${
+        hidden ? "opacity-0" : "opacity-100"
       }`}
     >
       <div className="flex flex-col items-center gap-6">

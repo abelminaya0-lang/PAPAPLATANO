@@ -6,16 +6,47 @@ type Slide = { src: string; alt: string };
 export function HeroCarousel({ slides }: { slides: Slide[] }) {
   const [index, setIndex] = React.useState(0);
   const total = slides.length;
+  const touchStartXRef = React.useRef<number | null>(null);
+  const touchStartYRef = React.useRef<number | null>(null);
 
-  const go = (dir: 1 | -1) => setIndex((i) => (i + dir + total) % total);
+  const go = React.useCallback(
+    (dir: 1 | -1) => setIndex((i) => (i + dir + total) % total),
+    [total],
+  );
 
   React.useEffect(() => {
-    const t = setInterval(() => setIndex((i) => (i + 1) % total), 5000);
+    const t = setInterval(() => setIndex((i) => (i + 1) % total), 5500);
     return () => clearInterval(t);
   }, [total]);
 
+  const onTouchStart = (e: React.TouchEvent) => {
+    touchStartXRef.current = e.touches[0].clientX;
+    touchStartYRef.current = e.touches[0].clientY;
+  };
+
+  const onTouchEnd = (e: React.TouchEvent) => {
+    if (touchStartXRef.current === null || touchStartYRef.current === null) return;
+    const diffX = touchStartXRef.current - e.changedTouches[0].clientX;
+    const diffY = touchStartYRef.current - e.changedTouches[0].clientY;
+
+    // Only swipe if horizontal move was greater than vertical and exceeded threshold
+    if (Math.abs(diffX) > 40 && Math.abs(diffX) > Math.abs(diffY)) {
+      if (diffX > 0) {
+        go(1);
+      } else {
+        go(-1);
+      }
+    }
+    touchStartXRef.current = null;
+    touchStartYRef.current = null;
+  };
+
   return (
-    <div className="relative overflow-hidden">
+    <div
+      className="relative overflow-hidden touch-pan-y"
+      onTouchStart={onTouchStart}
+      onTouchEnd={onTouchEnd}
+    >
       <div
         className="flex transition-transform duration-500 ease-out"
         style={{ transform: `translateX(-${index * 100}%)` }}
@@ -29,7 +60,7 @@ export function HeroCarousel({ slides }: { slides: Slide[] }) {
             height={1000}
             loading={i === 0 ? "eager" : "lazy"}
             referrerPolicy="no-referrer"
-            className="w-full shrink-0 object-cover"
+            className="w-full shrink-0 object-cover select-none pointer-events-auto"
           />
         ))}
       </div>
